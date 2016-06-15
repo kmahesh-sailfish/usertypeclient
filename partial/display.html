@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="companyController">
+<h3>Data</h3>
+<table>
+    <tr ng-repeat="user in Users">
+        <td>
+            {{user.usertypeID}}</td>
+        <td>
+            {{user.userName}}</td>
+        <td>
+            {{user.password}}
+        </td>
+        <td>
+            {{user.email}}
+        </td>
+        <td>
+
+            <input type="submit" id="Edit" value="Edit" ng-click="edit(user)"/></td>
+        <td>
+
+            <input type="submit" id="Delete" value="Delete" ng-click="deleteuser(User)"/></td>
+    </tr>
+    <tr>
+        <td>
+          <input type="text" ng-model="user.usertypeID" ng-hide="true" >
+        </td>
+        <td>
+            <input type="text" ng-model="user.userName" >
+        </td>
+        <td>
+            <input type="text" ng-model="user.password" >
+        </td>
+        <td>
+            <input type="text" ng-model="user.email" >
+        </td>
+       <td><input type="submit" ng-click="submit(user)"> </td>
+        <td>
+
+            <input type="submit" id="update" value="Update" ng-click="updateuser(user)"/></td>
+        <td>
+    </tr>
+    <tr>
+        <td>{{message}}</td>
+    </tr>
+</table>
+</body>
+</html>
